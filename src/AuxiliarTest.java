@@ -2,6 +2,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * A classe AuxiliarTest valida os métodos usados na classe Auxiliar.
+ *
+ * @author Leonardo Mallmann (leomallmann020302@gmail.com)
+ * @version 1.0 (2021-06-21)
+ */
 class AuxiliarTest {
     @Test
     public void initGame() {

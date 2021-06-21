@@ -1,3 +1,10 @@
+/**
+ * A classe Auxiliar contém os métodos usados na classe MainApp
+ * para tornam possível implementação completa da lógica do programa.
+ *
+ * @author Leonardo Mallmann (leomallmann020302@gmail.com)
+ * @version 1.0 (2021-06-20)
+ */
 class Auxiliar {
     static final String cardsDeck[] = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
 
