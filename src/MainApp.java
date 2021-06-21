@@ -1,14 +1,21 @@
 import java.util.Scanner;
 
 /**
- * A classe BlackJack permite jogar uma partida
- * de blackjack ou 21 entre um jogador e a máquina.
+ * A classe MainApp permite jogar uma partida
+ * de Blackjack entre um jogador e a máquina.
+ *
+ * <p>As regras foram atribuídas de acordo com esta referência:
+ * <a href="https://pt.wikipedia.org/wiki/Blackjack">Blackjack (pt)</a>.
  *
  * @author Leonardo Mallmann (leomallmann020302@gmail.com)
- * @version 1.0 (2021-06-14)
+ * @version 1.0 (2021-06-20)
  */
 
 public class MainApp {
+    /**
+     * @param Args
+     */
+
     public static void main(String[] Args) {
         Scanner keyboard = new Scanner(System.in);
         Auxiliar aux = new Auxiliar();
@@ -38,6 +45,8 @@ public class MainApp {
             return;
         }
 
+        System.out.println("");
+        System.out.println("");
         System.out.println("Dealer turn");
         String dealerCards[] = aux.init();
         while (aux.countCardsValue(playerCards) > aux.countCardsValue(dealerCards)){

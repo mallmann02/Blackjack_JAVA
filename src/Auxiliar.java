@@ -1,6 +1,12 @@
 class Auxiliar {
     static final String cardsDeck[] = { "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" };
 
+    /**
+     *
+     * @param cards
+     * @return - Um array com tamanho previamente definido preenchido
+     * com números e/ou caractéres que representam as cartas de um baralho.
+     */
     static String[] populateCardsArray(String[] cards) {
         for (int i=0;i<cards.length;i++) {
             int randomIndex = (int) (Math.random() * 13) + 1;
@@ -10,6 +16,12 @@ class Auxiliar {
         return cards;
     }
 
+    /**
+     *
+     * @param cards
+     * @return - Um número inteiro que é a soma dos valores que são atribuídos
+     * para cada carta presente na mão de quem joga.
+     */
     static int countCardsValue(String[] cards) {
         int totalCardsValue = 0;
         cards = convertCardsValues(cards);
@@ -19,6 +31,13 @@ class Auxiliar {
         return totalCardsValue;
     }
 
+    /**
+     *
+     * @param playerCards
+     * @return - Um array com valores de 0 a 10 que são originados a partir da
+     * conversão das cartas distribuĩdas para o valor que as mesmas representam dentro das
+     * regras do jogo.
+     */
     static String[] convertCardsValues(String[] playerCards) {
         for (int i=0;i<playerCards.length;i++) {
             if (playerCards[i].equals("J") || playerCards[i].equals("Q") || playerCards[i].equals("K") ) {
@@ -34,6 +53,12 @@ class Auxiliar {
         return playerCards;
     }
 
+    /**
+     * Método para exibir para quem joga as cartas que estão em sua mão e a
+     * sua pontuação.
+     *
+     * @param playerCards
+     */
     static void dump(String[] playerCards) {
         for (int i=0;i<playerCards.length;i++) {
             System.out.println(playerCards[i]);
@@ -43,6 +68,13 @@ class Auxiliar {
         System.out.println(score);
     }
 
+    /**
+     *
+     * @param playerCards
+     * @return - Um array contendo todas as cartas atribuídas anteriormente
+     * ao jogador, com o acréscimo de mais uma posição no array, representando
+     * uma nova carta.
+     */
     static String[] hitTable(String[] playerCards) {
         int lastIndex = playerCards.length + 1;
         String newCards[] = new String[lastIndex];
@@ -54,6 +86,11 @@ class Auxiliar {
         return newCards;
     }
 
+    /**
+     *
+     * @return - Um array com duas posições populadas com duas cartas do baralho,
+     * representado na constante "cardsDeck".
+     */
     static String[] init() {
         String playerCards[] = new String[2];
         playerCards = populateCardsArray(playerCards);
