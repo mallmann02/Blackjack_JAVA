@@ -10,7 +10,7 @@ class Auxiliar {
 
     /**
      *
-     * @param cards
+     * @param cards - Um array vazio a ser populado com cartas
      * @return - Um array com tamanho previamente definido preenchido
      * com números e/ou caractéres que representam as cartas de um baralho.
      */
@@ -25,7 +25,7 @@ class Auxiliar {
 
     /**
      *
-     * @param cards
+     * @param cards - Cartas a serem contabilizadas
      * @return - Um número inteiro que é a soma dos valores que são atribuídos
      * para cada carta presente na mão de quem joga.
      */
@@ -40,7 +40,7 @@ class Auxiliar {
 
     /**
      *
-     * @param playerCards
+     * @param playerCards - Um array com valores brutos das cartas
      * @return - Um array com valores de 0 a 10 que são originados a partir da
      * conversão das cartas distribuĩdas para o valor que as mesmas representam dentro das
      * regras do jogo.
@@ -64,7 +64,7 @@ class Auxiliar {
      * Método para exibir para quem joga as cartas que estão em sua mão e a
      * sua pontuação.
      *
-     * @param playerCards
+     * @param playerCards - Um array representando as cartas do jogador
      */
     static void dump(String[] playerCards) {
         for (int i=0;i<playerCards.length;i++) {
@@ -77,7 +77,7 @@ class Auxiliar {
 
     /**
      *
-     * @param playerCards
+     * @param playerCards - Um array representando as cartas do jogador
      * @return - Um array contendo todas as cartas atribuídas anteriormente
      * ao jogador, com o acréscimo de mais uma posição no array, representando
      * uma nova carta.
